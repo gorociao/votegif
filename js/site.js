@@ -70,7 +70,7 @@ $(window).load(function(){
             share_button.css("background", "url(./images/" + service + ".svg) no-repeat center");
             share_button.click(function(share_button_click_event) {
 
-                var url = domain + $(e.target).attr("state");
+                var url = domain; // + $(e.target).attr("state");
                 var text = "Share your state " + url;
                 var image_url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
                 
@@ -84,7 +84,7 @@ $(window).load(function(){
                 case "instagram":
                     break;
                 case "tumblr":
-                    OpenPopup("http://tumblr.com/widgets/share/tool?canonicalUrl=" + encodeURIComponent(url), 500, 250);
+                    OpenPopup("http://tumblr.com/widgets/share/tool?canonicalUrl=" + encodeURIComponent(image_url), 500, 250);
                     break;
                 }
             });
