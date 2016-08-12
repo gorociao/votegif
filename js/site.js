@@ -92,7 +92,7 @@ $(window).load(function(){
         });
         
         var copy_url_button = $("<div></div>").addClass("copy_url_button");
-        $(copy_url_button).attr("data-clipboard-text", domain + $(e.target).attr("state") + ".gif");
+        $(copy_url_button).attr("data-clipboard-text", domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif");
         share_bar.append(copy_url_button);
         
         var width = 600;
