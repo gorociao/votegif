@@ -5,6 +5,7 @@
 - name: California
 - name: Colorado
 - name: Connecticut
+- name: Dc
 - name: Delaware
 - name: Florida
 - name: Georgia
@@ -36,6 +37,7 @@
 - name: Oklahoma
 - name: Oregon
 - name: Pennsylvania
+- name: PuertoRico
 - name: RhodeIsland
 - name: SouthCarolina
 - name: SouthDakota

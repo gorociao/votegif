@@ -65,7 +65,7 @@ $(window).load(function(){
         $(["twitter","facebook","tumblr"]).each(function(i,service){
             var share_button = $("<div></div>").addClass("share_button").addClass("share_" + service).attr("id","share_" + service);
             share_button.css("background", "url(./images/" + service + ".svg) no-repeat center");
-            share_button.click(function(share_button_click_event){
+            share_button.click(function(share_button_click_event) {
 
                 var url = "http://votegifs.com/" + $(e.target).attr("state");
                 var text = "Share your state " + url;
