@@ -8,9 +8,18 @@
         <div id="header">
             <a href="/" id="logo"></a>
             <a href="{{ "/" | prepend: site.baseurl }}" id="about"></a>
+            <p>mouse over each state to play</p>
         </div>
         
-        <img src="/images/gifs/{{page.state | upcase}}.gif" />
+        <div id="states">
+            {% assign states = (site.data.states) %}
+            {% for state in states %}
+            <div class="state">
+                <img src="/images/static/{{state.name | upcase}}.gif" static="/images/static/{{state.name | upcase}}.gif" gif="/images/gifs/{{state.name | upcase}}.gif" state="{{state.name | downcase}}" />
+            </div>
+            {% endfor %}
+        </div>
+        
         
         {{ content }}
 

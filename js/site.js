@@ -72,14 +72,14 @@ $(window).load(function(){
 
                 var url = domain + $(e.target).attr("state");
                 var text = "Share your state " + url;
+                var image_url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
                 
                 switch(service) {
                 case "twitter":
                     OpenPopup("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text), 500, 250);
                     break;
                 case "facebook":
-                    url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
-                    OpenPopup("https://www.facebook.com/v2.1/dialog/share?app_id=147255609045485&display=popup&href=" + encodeURIComponent(url) + "", 500, 250);
+                    OpenPopup("https://www.facebook.com/v2.1/dialog/share?app_id=147255609045485&display=popup&href=" + encodeURIComponent(image_url) + "", 500, 250);
                     break;
                 case "instagram":
                     break;
