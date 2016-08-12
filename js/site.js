@@ -51,7 +51,9 @@ $(window).load(function(){
     $(state_image_selector).click(function(e){
         $("#lightbox").remove();
         
-        $(e.target).attr("src", $(e.target).attr("static"));
+        if(play_on_rollover) {
+            $(e.target).attr("src", $(e.target).attr("static"));
+        }
         
         var lightbox = $("<div></div>").attr("id","lightbox");
         $(lightbox).click(function(lightbox_click_event) {
