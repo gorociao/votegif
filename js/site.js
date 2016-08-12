@@ -89,7 +89,7 @@ $(window).load(function(){
             share_button.click(function(share_button_click_event) {
 
                 var url = domain; // + $(e.target).attr("state");
-                var text = "Share your state " + url;
+                var text = "Don't miss your state's deadline to register to vote! " + $(e.target).attr("tweet");
                 var image_url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
                 
                 switch(service) {

@@ -1,52 +1,155 @@
 - name: Alabama
+  twitter: https://twitter.com/VoteGif/status/764190997786009600
+  
 - name: Alaska
+  twitter: https://twitter.com/VoteGif/status/764190931272761344
+  
 - name: Arizona
+  twitter: https://twitter.com/VoteGif/status/764190868970561537
+  
 - name: Arkansas
+  twitter: https://twitter.com/VoteGif/status/764190814436200448
+
 - name: California
+  twitter: https://twitter.com/VoteGif/status/764190750477262848
+
 - name: Colorado
+  twitter: https://twitter.com/VoteGif/status/764190668503875584
+  
 - name: Connecticut
-- name: Dc
+  twitter: https://twitter.com/VoteGif/status/764190592746258436
+  
+- name: DC
+  twitter: https://twitter.com/VoteGif/status/764190512253374464
+  
 - name: Delaware
+  twitter: https://twitter.com/VoteGif/status/764190393198141444
+  
 - name: Florida
+  twitter: https://twitter.com/VoteGif/status/764190314559143936
+  
 - name: Georgia
+  twitter: https://twitter.com/VoteGif/status/764190175777976320
+  
 - name: Hawaii
+  twitter: https://twitter.com/VoteGif/status/764190115463831552
+  
 - name: Idaho
+  twitter: https://twitter.com/VoteGif/status/764190058542948353
+  
 - name: Illinois
+  twitter: https://twitter.com/VoteGif/status/764189965534240770
+  
 - name: Indiana
+  twitter: https://twitter.com/VoteGif/status/764189727364898817
+  
 - name: Iowa
+  twitter: https://twitter.com/VoteGif/status/764189586792873984
+  
 - name: Kansas
+  twitter: https://twitter.com/VoteGif/status/764189342789173248
+  
 - name: Kentucky
+  twitter: https://twitter.com/VoteGif/status/764189270693249024
+  
 - name: Louisiana
+  twitter: https://twitter.com/VoteGif/status/764189192591175680
+  
 - name: Maine
+  twitter: https://twitter.com/VoteGif/status/764189110127001601
+  
 - name: Maryland
+  twitter: https://twitter.com/VoteGif/status/764189001691652096
+  
 - name: Massachusetts
+  twitter: https://twitter.com/VoteGif/status/764188930476564480
+  
 - name: Michigan
+  twitter: https://twitter.com/VoteGif/status/764188831876845568
+  
 - name: Minnesota
+  twitter: https://twitter.com/VoteGif/status/764188764923191296
+  
 - name: Mississippi
+  twitter: https://twitter.com/VoteGif/status/764188678994427904
+  
 - name: Missouri
+  twitter: https://twitter.com/VoteGif/status/764188597033598976
+  
 - name: Montana
+  twitter: https://twitter.com/VoteGif/status/764188480134053892
+  
 - name: Nebraska
+  twitter: https://twitter.com/VoteGif/status/764188392745791488
+  
 - name: Nevada
-- name: NewHampshire
-- name: NewJersey
-- name: NewMexico
-- name: NewYork
-- name: NorthCarolina
-- name: NorthDakota
+  twitter: https://twitter.com/VoteGif/status/764188311753744388
+  
+- name: New Hampshire
+  twitter: https://twitter.com/VoteGif/status/764188232800169984
+  
+- name: New Jersey
+  twitter: https://twitter.com/VoteGif/status/764188080525963265
+  
+- name: New Mexico
+  twitter: https://twitter.com/VoteGif/status/764188019876302849
+  
+- name: New York
+  twitter: https://twitter.com/VoteGif/status/764187950682898433
+  
+- name: North Carolina
+  twitter: https://twitter.com/VoteGif/status/764187804482080768
+  
+- name: North Dakota
+  twitter: https://twitter.com/VoteGif/status/764187739252199424
+  
 - name: Ohio
+  twitter: https://twitter.com/VoteGif/status/764187679210737664
+  
 - name: Oklahoma
+  twitter: https://twitter.com/VoteGif/status/764187616015183872
+  
 - name: Oregon
+  twitter: https://twitter.com/VoteGif/status/764187555579490304
+  
 - name: Pennsylvania
-- name: PuertoRico
-- name: RhodeIsland
-- name: SouthCarolina
-- name: SouthDakota
+  twitter: https://twitter.com/VoteGif/status/764187437740490752
+  
+- name: Puerto Rico
+  twitter: https://twitter.com/VoteGif/status/764187237017915396
+  
+- name: Rhode Island
+  twitter: https://twitter.com/VoteGif/status/764186873258450945
+
+- name: South Carolina
+  twitter: https://twitter.com/VoteGif/status/764186805847678976
+
+- name: South Dakota
+  twitter: https://twitter.com/VoteGif/status/764186618051846145
+
 - name: Tennessee
+  twitter: https://twitter.com/VoteGif/status/764186540473982976
+
 - name: Texas
+  twitter: https://twitter.com/VoteGif/status/764186407820726272
+
 - name: Utah
+  twitter: https://twitter.com/VoteGif/status/764186314333888512
+  
 - name: Vermont
+  twitter: https://twitter.com/VoteGif/status/764186226182291456
+  
 - name: Virginia
+  twitter: https://twitter.com/VoteGif/status/764186145076940800
+  
 - name: Washington
-- name: WestVirginia
+  twitter: https://twitter.com/VoteGif/status/764186055243358208
+
+- name: West Virginia
+  twitter: https://twitter.com/VoteGif/status/764185898225438720
+  
 - name: Wisconsin
+  twitter: https://twitter.com/VoteGif/status/764185714770714624
+
 - name: Wyoming
+  twitter: https://twitter.com/VoteGif/status/764184946336526336
