@@ -28,8 +28,10 @@ $(window).load(function(){
             $(e.target).attr("src", $(e.target).attr("gif"));
         });
         $(state_image_selector).mouseout(function(e){
-            $(".cta").remove();
-            $(e.target).attr("src", $(e.target).attr("static"));
+            if($(e.toElement).parents(".state").length == 0 || $(e.toElement).parents(".state")[0] != $(e.delegateTarget)){
+                $(".cta").remove();
+                $(e.target).attr("src", $(e.target).attr("static"));
+            }
         });
     }
     
