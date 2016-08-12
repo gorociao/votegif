@@ -52,7 +52,7 @@ body {
 }
 @media (max-width: 500px) {
   #header p {
-    display: none;
+/*    display: none;*/
   }
 }
 
