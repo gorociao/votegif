@@ -129,6 +129,15 @@ body {
   margin-left: -5px;
   margin-top: 10px;
 }
+@media (max-width: 640px) {
+  #lightbox .share_bar {
+    text-align: center;
+  }
+  #lightbox .state_gif {
+    width: 100%;
+    height: auto;
+  }
+}
 #lightbox .share_button {
   cursor: pointer;
   display: inline-block;

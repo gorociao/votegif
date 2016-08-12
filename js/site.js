@@ -91,12 +91,14 @@ $(window).load(function(){
             share_bar.append(share_button);
         });
         
-        var copy_url_button = $("<div></div>").addClass("copy_url_button");
-        $(copy_url_button).attr("data-clipboard-text", domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif");
-        share_bar.append(copy_url_button);
+        if(window.innerWidth > 640) {
+            var copy_url_button = $("<div></div>").addClass("copy_url_button");
+            $(copy_url_button).attr("data-clipboard-text", domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif");
+            share_bar.append(copy_url_button);
+        }
         
-        var width = 600;
-        var height = 550;
+        var width = window.innerWidth < 640 ? window.innerWidth - 40 : 600;
+        var height = window.innerWidth < 640 ? window.innerWidth - 90 : 550;
         content.css("width", width);
         content.css("margin-left", -(width / 2) + "px");
         content.css("height", height);
