@@ -1,39 +1,50 @@
 var domain = "http://votegif.com/";
 var state_image_selector = "#states .state";
-
-function OpenPopup(url, w, h) {
-    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
-    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
-    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-    var top = ((height / 2) - (h / 2)) + dualScreenTop;
-    var newWindow = window.open(url, "", 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-    if (window.focus) {
-        newWindow.focus();
-    }
-}
+var play_on_rollover = false;
 
 $(window).load(function(){
     
-    if(window.innerWidth < 550) {
+    $("#mouse_over").click(function(e) {
+        $("#header span").removeClass("current");
+        $(e.target).addClass("current");
+        play_on_rollover = true;
+        $(state_image_selector).each(function(i,e){
+            var img = $(e).children("img");
+            img.attr("src", img.attr("static"));
+        });
+    });
+    
+    $("#play_all").click(function(e) {
+        $("#header span").removeClass("current");
+        $(e.target).addClass("current");
+        play_on_rollover = false;
         $(state_image_selector).each(function(i,e){
             var img = $(e).children("img");
             img.attr("src", img.attr("gif"));
         });
+    });
+    
+    if(window.innerWidth < 550) {
+        $("#play_all").click();
     }
     else {
-        $(state_image_selector).mouseover(function(e){
+        $("#mouse_over").click();
+    }
+    
+    $(state_image_selector).mouseover(function(e){
+        if(play_on_rollover) {
             $(e.target).parent().append($("<div></div>").addClass("cta"));
             $(e.target).attr("src", $(e.target).attr("gif"));
-        });
-        $(state_image_selector).mouseout(function(e){
+        }
+    });
+    $(state_image_selector).mouseout(function(e){
+        if(play_on_rollover) {
             if($(e.toElement).parents(".state").length == 0 || $(e.toElement).parents(".state")[0] != $(e.delegateTarget)){
                 $(".cta").remove();
                 $(e.target).attr("src", $(e.target).attr("static"));
             }
-        });
-    }
+        }
+    });
     
     $(state_image_selector).click(function(e){
         $("#lightbox").remove();
@@ -117,6 +128,17 @@ $(window).load(function(){
             $("#lightbox").remove();
         }
     });
-    
-    // $(state_image_selector).click();
 });
+
+function OpenPopup(url, w, h) {
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, "", 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    if (window.focus) {
+        newWindow.focus();
+    }
+}

@@ -41,11 +41,21 @@ body {
 #header p {
   margin: 0px;
 }
+#header p span {
+  cursor: pointer;
+}
+#header p span.current {
+  color: #E21047;
+}
+#header p span:hover {
+  color: #E21047;
+}
 @media (max-width: 500px) {
   #header p {
     display: none;
   }
 }
+
 #header #logo {
   display: inline-block;
   width: 300px;
