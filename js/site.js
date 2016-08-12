@@ -32,17 +32,17 @@ $(window).load(function(){
     }
     
     $(state_image_selector).mouseover(function(e){
+        $(e.target).parent().append($("<div></div>").addClass("cta"));
         if(play_on_rollover) {
-            $(e.target).parent().append($("<div></div>").addClass("cta"));
             $(e.target).attr("src", $(e.target).attr("gif"));
         }
     });
     $(state_image_selector).mouseout(function(e){
+        if($(e.toElement).parents(".state").length == 0 || $(e.toElement).parents(".state")[0] != $(e.delegateTarget)[0]){
+            $(".cta").remove();
+        }
         if(play_on_rollover) {
-            if($(e.toElement).parents(".state").length == 0 || $(e.toElement).parents(".state")[0] != $(e.delegateTarget)){
-                $(".cta").remove();
-                $(e.target).attr("src", $(e.target).attr("static"));
-            }
+            $(e.target).attr("src", $(e.target).attr("static"));
         }
     });
     

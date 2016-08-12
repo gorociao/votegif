@@ -33,19 +33,20 @@ body {
 
 #header {
   margin: 50px auto;
-  color: #242630;
   font-weight: bold;
-  font-style: italic;
+  color: #fff;
   font-size: 22px;
 }
 #header p {
   margin: 0px;
 }
 #header p span {
+  color: #242630;
   cursor: pointer;
 }
 #header p span.current {
   color: #E21047;
+  border-bottom: 2px solid #E21047;
 }
 #header p span:hover {
   color: #E21047;
