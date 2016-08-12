@@ -6,6 +6,9 @@ $(window).load(function(){
     
     var is_mobile = window.innerWidth < 550;
     
+    if(is_mobile) {
+        $("#mouse_over").text("show state");
+    }
     $("#mouse_over").click(function(e) {
         $("#header span").removeClass("current");
         $(e.target).addClass("current");
@@ -113,7 +116,7 @@ $(window).load(function(){
         }
         
         var width = window.innerWidth < 640 ? window.innerWidth - 40 : 600;
-        var height = window.innerWidth < 640 ? window.innerWidth - 90 : 550;
+        var height = window.innerWidth < 640 ? window.innerWidth - 30 : 550;
         content.css("width", width);
         content.css("margin-left", -(width / 2) + "px");
         content.css("height", height);

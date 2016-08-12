@@ -52,11 +52,6 @@ body {
   background-color: #E21047;
   color: #242630;
 }
-@media (max-width: 500px) {
-  #header p {
-/*    display: none;*/
-  }
-}
 
 #header #logo {
   display: inline-block;
@@ -81,7 +76,17 @@ body {
   vertical-align: top;
   margin-left: -10px;
 }
-
+@media (max-width: 640px) {
+  #header #logo {
+    width: 210px;
+  }
+  #header #about,
+  #header #back {
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+  }
+}
 #states .state {
   line-height: 0px;
   width: 250px;
@@ -142,6 +147,15 @@ body {
   margin-top: 10px;
 }
 @media (max-width: 640px) {
+  #lightbox .padding {
+    padding: 10px 40px;
+  }
+  #lightbox .close_button {
+    top: 15px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+  }
   #lightbox .share_bar {
     text-align: center;
   }
