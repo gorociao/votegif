@@ -11,7 +11,7 @@ title: Vote Gif
     {% assign states = (site.data.states) %}
     {% for state in states %}
     <div class="state">
-        <img src="images/static/{{state.name | upcase}}_blank.jpg" static="images/static/{{state.name | upcase}}_blank.jpg" gif="images/gifs/{{state.name | upcase}}.gif" state="{{state.name | downcase}}" />
+        <img src="images/static/{{state.name | upcase}}.gif" static="images/static/{{state.name | upcase}}.gif" gif="images/gifs/{{state.name | upcase}}.gif" state="{{state.name | downcase}}" />
     </div>
     {% endfor %}
 </div>
