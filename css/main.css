@@ -43,13 +43,14 @@ body {
 #header p span {
   color: #242630;
   cursor: pointer;
-}
-#header p span.current {
-  color: #E21047;
-  border-bottom: 2px solid #E21047;
+  padding: 0px 5px 5px 5px;
 }
 #header p span:hover {
   color: #E21047;
+}
+#header p span.current {
+  background-color: #E21047;
+  color: #242630;
 }
 @media (max-width: 500px) {
   #header p {
