@@ -1,3 +1,4 @@
+var domain = "http://votegif.com/";
 var state_image_selector = "#states .state";
 
 function OpenPopup(url, w, h) {
@@ -67,7 +68,7 @@ $(window).load(function(){
             share_button.css("background", "url(./images/" + service + ".svg) no-repeat center");
             share_button.click(function(share_button_click_event) {
 
-                var url = "http://votegifs.com/" + $(e.target).attr("state");
+                var url = domain + $(e.target).attr("state");
                 var text = "Share your state " + url;
                 
                 switch(service) {
@@ -88,7 +89,7 @@ $(window).load(function(){
         });
         
         var copy_url_button = $("<div></div>").addClass("copy_url_button");
-        $(copy_url_button).attr("data-clipboard-text", "http://votegifs.com/" + $(e.target).attr("state"));
+        $(copy_url_button).attr("data-clipboard-text", domain + $(e.target).attr("state") + ".gif");
         share_bar.append(copy_url_button);
         
         var width = 600;

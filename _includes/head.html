@@ -22,4 +22,11 @@
     <script src="{{ "/js/jquery-2.1.1.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/js/site.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/js/clipboard.min.js" | prepend: site.baseurl }}"></script>
+    
+    {% if page.state %}
+    <meta property="og:url"                content="http://votegif.com/{{ page.state }}/" />
+    <meta property="og:title"              content="VoteGif for {{ page.state | capitalize }}" />
+    <meta property="og:description"        content="Find out the deadline for voting in {{ page.state | capitalze }}." />
+    <meta property="og:image"              content="http://votegif.com/images/static/{{ page.state | upcase }}_blank.jpg" />
+    {% endif %}
 </head>
