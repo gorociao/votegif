@@ -26,7 +26,13 @@
     {% if page.state %}
     <meta property="og:url"                content="http://votegif.com/{{ page.state }}/" />
     <meta property="og:title"              content="VoteGif for {{ page.state | capitalize }}" />
-    <meta property="og:description"        content="Find out the deadline for voting in {{ page.state | capitalze }}." />
-    <meta property="og:image"              content="http://votegif.com/images/static/{{ page.state | upcase }}_blank.jpg" />
+    <meta property="og:description"        content="Find out the deadline for voting in {{ page.state | capitalize }}." />
+    <meta property="og:image"              content="http://votegif.com/images/gifs/{{ page.state | upcase }}.gif" />
+    
+    <meta property="og:type"                content="video.other">
+    <meta property="og:image:width"       content="550">
+    <meta property="og:image:height"       content="550">
+    
     {% endif %}
 </head>
+

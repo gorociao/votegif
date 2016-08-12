@@ -76,7 +76,8 @@ $(window).load(function(){
                     OpenPopup("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text), 500, 250);
                     break;
                 case "facebook":
-                    OpenPopup("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url) + "", 500, 250);
+                    // https://www.facebook.com/v2.1/dialog/share?app_id=406655189415060&display=popup&e2e=%7B%7D&href=http%3A%2F%2Fgph.is%2F12esg4c&locale=en_US&mobile_iframe=false&next=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FLcj5EtQ5qmD.js%3Fversion%3D42%23cb%3Df318627991ec938%26domain%3Dgiphy.com%26origin%3Dhttp%253A%252F%252Fgiphy.com%252Ff213d15fd20fed8%26relation%3Dopener%26frame%3Df33ddbb2a77744%26result%3D%2522xxRESULTTOKENxx%2522&sdk=joey&version=v2.1
+                    OpenPopup("https://www.facebook.com/v2.1/dialog/share?app_id=406655189415060&display=popup&href=" + encodeURIComponent(url) + "", 500, 250);
                     break;
                 case "instagram":
                     break;
