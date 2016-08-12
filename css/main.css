@@ -1,0 +1,147 @@
+body { 
+  background-color: #1e37f4; 
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+#about {
+  max-width: 640px;
+  margin: 0px auto;
+  text-align: left;
+}
+#about a {
+  color: #fff;
+}
+#about h2,
+#about p {
+  font-size: 18px;
+  padding: 0px 20px;
+}
+#about h2 {
+  margin: 30px 0px 8px 0px;
+}
+#about h2:first-of-type {
+  margin: 0px;
+}
+#about p {
+  margin: 0px;
+}
+#about p:last-of-type {
+  margin-bottom: 100px;
+}
+
+#header {
+  margin: 50px auto;
+  color: #242630;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+}
+#header p {
+  margin: 0px;
+}
+@media (max-width: 500px) {
+  #header p {
+    display: none;
+  }
+}
+#header #logo {
+  display: inline-block;
+  width: 300px;
+  height: 64px;
+  background: url(../images/logo.svg) no-repeat center;
+  vertical-align: top;
+}
+#header #about {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../images/about.svg) no-repeat center;
+  vertical-align: top;
+  margin-left: -10px;
+}
+#header #back {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../images/back.svg) no-repeat center;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+#states img {
+  width: 250px;
+}
+#states .state {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+#states .state .cta {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+  background: url(../images/cta.svg) no-repeat center bottom;
+}
+
+#lightbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0,0,0,.5);
+}
+#lightbox .content {
+  position: absolute;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+}
+#lightbox .padding {
+  padding: 40px 90px;
+}
+#lightbox .close_button {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  background: url(../images/close.svg) no-repeat center;
+}
+#lightbox .state_gif {
+  width: 420px;
+  height: 420px;
+}
+#lightbox .share_bar {
+  position: relative;
+  text-align: left;
+  margin-left: -5px;
+  margin-top: 10px;
+}
+#lightbox .share_button {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+#lightbox .copy_url_button {
+  cursor: pointer;
+  width: 190px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  background: url(../images/copy_url_button.svg) no-repeat right;
+}
+
+#lightbox .copy_url_button.copied {
+  background: url(../images/copied_url_button.svg) no-repeat right;
+}
+

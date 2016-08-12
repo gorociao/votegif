@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        
+        {% include header.html %}
+        
+        <div id="header">
+            <a href="/" id="logo"></a>
+            <a href="{{ "/" | prepend: site.baseurl }}" id="about"></a>
+        </div>
+        
+        <img src="/images/gifs/{{page.state | upcase}}.gif" />
+        
+        {{ content }}
+
+    </body>
+</html>

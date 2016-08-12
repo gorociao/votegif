@@ -1,0 +1,25 @@
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="{{ page.author }}">
+
+    {% for tag in page.meta %}
+    <meta name="{{ tag[0] | replace: "__", ":" }}" content="{{ tag[1] }}"/>
+    {% endfor %}
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{site.title | escape }}{% endif %}</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i" rel="stylesheet">
+    <link href="{{ "/css/main.css" | prepend: site.baseurl }}" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ "/assets/images/favicon-32.png" | prepend: site.baseurl }}" sizes="32x32">
+
+    <script src="{{ "/js/jquery-2.1.1.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/site.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/clipboard.min.js" | prepend: site.baseurl }}"></script>
+</head>

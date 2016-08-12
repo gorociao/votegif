@@ -1,0 +1,9 @@
+title: Engineering at Dots
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude: ["Rakefile", "README.md", "Gemfile", "Gemfile.lock"]  
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
