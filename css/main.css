@@ -1,5 +1,5 @@
 body { 
-  background-color: #1e37f4; 
+  background-color: #0034F9; 
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
@@ -38,7 +38,7 @@ body {
   font-size: 22px;
 }
 #header p {
-  margin: 0px;
+  margin: 10px 0px 0px 0px;
 }
 #header p span {
   color: #242630;
