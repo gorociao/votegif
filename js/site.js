@@ -112,7 +112,7 @@ $(window).load(function(){
                 var url = domain;
                 var text = "Don't miss your state's deadline to register to vote! " + $(e.target).attr("tweet");
                 var image_url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
-				var caption = $(e.target).attr("description");
+				var caption = $(e.target).attr("description").replace("http://vote.usa.gov","<a href='http://vote.usa.gov'>http://vote.usa.gov</a>") + "<br/>(via <a href='http://votegif.com/'>http://votegif.com/</a>)";
 
                 switch(service) {
                 case "twitter":
