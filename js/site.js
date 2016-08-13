@@ -75,10 +75,6 @@ $(window).load(function(){
     $(state_image_selector).click(function(e){
         $("#lightbox").remove();
         
-        if(play_on_rollover) {
-            $(e.target).attr("src", $(e.target).attr("static"));
-        }
-        
         var lightbox = $("<div></div>").attr("id","lightbox");
         $(lightbox).click(function(lightbox_click_event) {
             if($(lightbox_click_event.target).attr("id")=="lightbox") {
@@ -150,6 +146,10 @@ $(window).load(function(){
         clipboard.on('success', function(e) {
             $(".copy_url_button").addClass("copied");
         });
+		
+        if(play_on_rollover) {
+            $(e.target).attr("src", $(e.target).attr("static"));
+        }
     });
 	
     if(!is_mobile){
