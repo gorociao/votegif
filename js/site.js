@@ -111,7 +111,7 @@ $(window).load(function(){
 
                 var url = domain;
                 var text = "Don't miss your state's deadline to register to vote! " + $(e.target).attr("tweet");
-                var image_url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
+                var image_url = domain + "" + $(e.target).attr("state").toUpperCase() + ".gif";
 				var caption = $(e.target).attr("description").replace("http://vote.usa.gov","<a href='http://vote.usa.gov'>http://vote.usa.gov</a>") + "<br/>(via <a href='http://votegif.com/'>http://votegif.com/</a>)";
 
                 switch(service) {
@@ -133,7 +133,7 @@ $(window).load(function(){
         
         if(window.innerWidth > 640) {
             var copy_url_button = $("<div></div>").addClass("copy_url_button");
-            $(copy_url_button).attr("data-clipboard-text", domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif");
+            $(copy_url_button).attr("data-clipboard-text", domain + "" + $(e.target).attr("state").toUpperCase() + ".gif");
             share_bar.append(copy_url_button);
         }
         

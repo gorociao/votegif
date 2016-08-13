@@ -13,7 +13,7 @@ author: Erica Gorochow
     {% assign states = (site.data.states) %}
     {% for state in states %}
     <div class="state">
-        <img src="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" static="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" gif="images/gifs/{{state.name | upcase | replace: ' ',''}}.gif" state="{{state.name | downcase | replace: ' ','' }}" tweet="{{state.twitter}}" description="{{ state.text }}" />
+        <img src="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" static="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" gif="{{state.name | upcase | replace: ' ',''}}.gif" state="{{state.name | downcase | replace: ' ','' }}" tweet="{{state.twitter}}" description="{{ state.text }}" />
     </div>
     {% endfor %}
 </div>
