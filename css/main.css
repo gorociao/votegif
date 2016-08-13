@@ -78,7 +78,7 @@ body {
 }
 @media (max-width: 640px) {
   #header #logo {
-    width: 210px;
+    width: 80%;
   }
   #header #about,
   #header #back {
