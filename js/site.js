@@ -1,10 +1,29 @@
 var domain = "http://votegif.com/";
 var state_image_selector = "#states .state";
 var play_on_rollover = false;
+var is_mobile;
+
+$(window).scroll(function(){
+	if(is_mobile){
+        $(state_image_selector).each(function(i,e){
+            var img = $(e).children("img");
+            if(img[0].y > $(window).scrollTop() && img[0].y < $(window).scrollTop() + $(window).height()) {
+				if(img.attr("src") != img.attr("gif")) {
+            		img.attr("src", img.attr("gif"));
+				}
+            }
+			else{
+				if(img.attr("src") != img.attr("static")) {
+            		img.attr("src", img.attr("static"));
+				}
+            }
+        });
+	}
+});
 
 $(window).load(function(){
     
-    var is_mobile = window.innerWidth < 550;
+	is_mobile = window.innerWidth < 550;
     
     if(is_mobile) {
         $("#mouse_over").text("show state");
@@ -23,10 +42,12 @@ $(window).load(function(){
         $("#header span").removeClass("current");
         $(e.target).addClass("current");
         play_on_rollover = false;
-        $(state_image_selector).each(function(i,e){
-            var img = $(e).children("img");
-            img.attr("src", img.attr("gif"));
-        });
+        if(!is_mobile) {
+	        $(state_image_selector).each(function(i,e){
+	            var img = $(e).children("img");
+	            img.attr("src", img.attr("gif"));
+	        });
+        }
     });
     
     if(is_mobile) {
@@ -88,10 +109,11 @@ $(window).load(function(){
             share_button.css("background", "url(./images/" + service + ".svg) no-repeat center");
             share_button.click(function(share_button_click_event) {
 
-                var url = domain; // + $(e.target).attr("state");
+                var url = domain;
                 var text = "Don't miss your state's deadline to register to vote! " + $(e.target).attr("tweet");
                 var image_url = domain + "images/gifs/" + $(e.target).attr("state").toUpperCase() + ".gif";
-                
+				var caption = $(e.target).attr("description");
+
                 switch(service) {
                 case "twitter":
                     OpenPopup("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text), 500, 250);
@@ -102,7 +124,7 @@ $(window).load(function(){
                 case "instagram":
                     break;
                 case "tumblr":
-                    OpenPopup("http://tumblr.com/widgets/share/tool?canonicalUrl=" + encodeURIComponent(image_url), 500, 250);
+                    OpenPopup("http://tumblr.com/widgets/share/tool?canonicalUrl=" + encodeURIComponent(image_url) + "&caption=" + encodeURIComponent(caption), 500, 250);
                     break;
                 }
             });
@@ -129,12 +151,16 @@ $(window).load(function(){
             $(".copy_url_button").addClass("copied");
         });
     });
-    $(window).keydown(function(e) {
-        // Escape key pressed
-        if(e.which == 27) {
-            $("#lightbox").remove();
-        }
-    });
+	
+    if(!is_mobile){
+	    $(window).keydown(function(e) {
+	        if(e.which == 27) {
+	            $("#lightbox").remove();
+	        }
+	    });
+    }
+	
+	$(window).scroll();
 });
 
 function OpenPopup(url, w, h) {

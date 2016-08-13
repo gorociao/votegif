@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ page.description }}">
     <meta name="author" content="{{ page.author }}">
-
-    {% for tag in page.meta %}
-    <meta name="{{ tag[0] | replace: "__", ":" }}" content="{{ tag[1] }}"/>
-    {% endfor %}
-
+    
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{site.title | escape }}{% endif %}</title>
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -22,42 +18,13 @@
     <script src="{{ "/js/site.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/js/clipboard.min.js" | prepend: site.baseurl }}"></script>
     
-    {% if page.state %}
-    <meta property="og:url"                content="http://votegif.com/{{ page.state }}/" />
-    <meta property="og:title"              content="VoteGif for {{ page.state | capitalize }}" />
-    <meta property="og:description"        content="Find out the deadline for voting in {{ page.state | capitalize }}." />
-    <meta property="og:image"              content="http://votegif.com/images/gifs/{{ page.state | upcase }}.gif" />
-    <meta property="og:type"               content="video.other">
-    <meta property="og:image:width"        content="550">
-    <meta property="og:image:height"       content="550">
-        
-    <meta name="twitter:card" value="player">
-    <meta name="twitter:site" value="@gorociao">
-    <meta name="twitter:title" value="votegif.com">
-    <meta name="twitter:description" value="sample">
-    <meta name="twitter:image" value="http://votegif.com/sample.gif">
-    <meta name="twitter:player" value="http://votegif.com/sample/">
-    <meta name="twitter:player:width" value="500">
-    <meta name="twitter:player:height" value="500">
-    <meta name="twitter:domain" value="votegif.com">
-    {% else %}
     <meta property="og:url"                content="http://votegif.com/" />
     <meta property="og:title"              content="VoteGif" />
-    <meta property="og:description"        content="Only dummies don't vote. Easily find your state's deadline to register and remind your friends to vote." />
+    <meta property="og:description"        content="{{ page.description }}" />
     <meta property="og:image"              content="http://votegif.com/images/gifs/NEWYORK.gif" />
     <meta property="og:type"               content="video.other">
     <meta property="og:image:width"        content="550">
     <meta property="og:image:height"       content="550">
-    
-    <meta name="twitter:card" value="player">
-    <meta name="twitter:site" value="@gorociao">
-    <meta name="twitter:title" value="votegif.com">
-    <meta name="twitter:description" value="sample">
-    <meta name="twitter:image" value="http://votegif.com/sample.gif">
-    <meta name="twitter:player" value="http://votegif.com/sample/">
-    <meta name="twitter:player:width" value="500">
-    <meta name="twitter:player:height" value="500">
-    <meta name="twitter:domain" value="votegif.com">
-    {% endif %}
+
 </head>
 

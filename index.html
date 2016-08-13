@@ -1,6 +1,8 @@
 ---
 layout: default
 title: VoteGif
+description: Only dummies don't vote. Easily find your state's deadline to register and remind your friends to vote.
+author: Erica Gorochow
 ---
 <div id="header">
     <a href="/" id="logo"></a>
@@ -11,7 +13,7 @@ title: VoteGif
     {% assign states = (site.data.states) %}
     {% for state in states %}
     <div class="state">
-        <img src="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" static="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" gif="images/gifs/{{state.name | upcase | replace: ' ',''}}.gif" state="{{state.name | downcase | replace: ' ','' }}" tweet="{{state.twitter}}" />
+        <img src="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" static="images/static/{{state.name | upcase | replace: ' ', ''}}.gif" gif="images/gifs/{{state.name | upcase | replace: ' ',''}}.gif" state="{{state.name | downcase | replace: ' ','' }}" tweet="{{state.twitter}}" description="{{ state.text }}" />
     </div>
     {% endfor %}
 </div>
