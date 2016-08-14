@@ -152,6 +152,12 @@ $(window).load(function(){
         var clipboard = new Clipboard('.copy_url_button');
         clipboard.on('success', function(e) {
             $(".copy_url_button").addClass("copied");
+			ga('send', {
+			  hitType: 'event',
+			  eventCategory: 'States',
+			  eventLabel: $(e.target).attr("state"),
+			  eventAction: 'share_direct',
+			});
         });
 		
         if(play_on_rollover) {
