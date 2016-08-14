@@ -150,6 +150,14 @@ $(window).load(function(){
         if(play_on_rollover) {
             $(e.target).attr("src", $(e.target).attr("static"));
         }
+		
+		ga('send', {
+		  hitType: 'event',
+		  eventCategory: 'States',
+		  eventLabel: $(e.target).attr("state"),
+		  eventAction: 'click',
+		});
+		
     });
 	
     if(!is_mobile){
