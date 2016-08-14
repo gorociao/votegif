@@ -123,6 +123,13 @@ $(window).load(function(){
                     OpenPopup("http://tumblr.com/widgets/share/tool?canonicalUrl=" + encodeURIComponent(image_url) + "&caption=" + encodeURIComponent(caption), 500, 250);
                     break;
                 }
+				
+				ga('send', {
+				  hitType: 'event',
+				  eventCategory: 'States',
+				  eventLabel: $(e.target).attr("state"),
+				  eventAction: 'share_' + service,
+				});
             });
             share_bar.append(share_button);
         });
