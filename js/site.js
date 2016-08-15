@@ -4,7 +4,7 @@ var play_on_rollover = false;
 var is_mobile;
 
 $(window).scroll(function(){
-	if(is_mobile){
+	if(is_mobile && !play_on_rollover){
         $(state_image_selector).each(function(i,e){
             var img = $(e).children("img");
             if(img[0].y > $(window).scrollTop() && img[0].y < $(window).scrollTop() + $(window).height()) {
