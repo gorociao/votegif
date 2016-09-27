@@ -1,4 +1,4 @@
-var domain = "http://votegif.com/";
+var domain = "http://votargif.com/";
 var state_image_selector = "#states .state";
 var play_on_rollover = false;
 var is_mobile;
