@@ -106,9 +106,9 @@ $(window).load(function(){
             share_button.click(function(share_button_click_event) {
 
                 var url = domain;
-                var text = "Don't miss your state's deadline to register to vote! " + $(e.target).attr("tweet");
+                var text = "Encuentra y comparte la fecha límite de tu estado para registrarte para votar! " + $(e.target).attr("tweet");
                 var image_url = domain + "" + $(e.target).attr("state").toUpperCase() + ".gif";
-				var caption = $(e.target).attr("description").replace("http://vote.usa.gov","<a href='http://vote.usa.gov'>http://vote.usa.gov</a>") + "<br/>(via <a href='http://votegif.com/'>http://votegif.com/</a>)";
+				var caption = $(e.target).attr("description").replace("http://voyavotar2016.com","<a href='http://voyavotar2016.com'>http://voyavotar2016.com</a>") + "<br/>(via <a href='http://votargif.com/'>http://votargif.com/</a>)";
 
                 switch(service) {
                 case "twitter":
