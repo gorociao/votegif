@@ -26,7 +26,7 @@ $(window).load(function(){
 	is_mobile = window.innerWidth < 550;
     
     if(is_mobile) {
-        $("#mouse_over").text("show state");
+        $("#mouse_over").text("ver estado");
     }
     $("#mouse_over").click(function(e) {
         $("#header span").removeClass("current");
