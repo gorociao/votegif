@@ -55,10 +55,12 @@ body {
 
 #header #logo {
   display: inline-block;
-  width: 300px;
-  height: 64px;
   background: url(../images/logo_midterm.svg) no-repeat center;
+  width: 330px;
+  height: 124px;
   vertical-align: top;
+  margin-left: 35px;
+  margin-right: 5px;
 }
 #header #about {
   display: inline-block;
