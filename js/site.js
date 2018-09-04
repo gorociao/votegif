@@ -115,7 +115,7 @@ $(window).load(function(){
                     OpenPopup("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text), 500, 250);
                     break;
                 case "facebook":
-                    OpenPopup("https://www.facebook.com/v2.1/dialog/share?app_id=147255609045485&display=popup&href=" + encodeURIComponent(image_url) + "", 500, 250);
+                    OpenPopup("https://www.facebook.com/v2.1/dialog/share?app_id=147255609045485&display=popup&href=" + encodeURIComponent(image_url) + "?v=midterms2018", 500, 250);
                     break;
                 case "instagram":
                     break;
