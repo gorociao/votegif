@@ -100,7 +100,7 @@ $(window).load(function(){
         var share_bar = $("<div></div>").addClass("share_bar");
         padding.append(share_bar);
         
-        $(["twitter","facebook","tumblr"]).each(function(i,service){
+        $(["twitter","tumblr"]).each(function(i,service){
             var share_button = $("<div></div>").addClass("share_button").addClass("share_" + service).attr("id","share_" + service);
             share_button.css("background", "url(./images/" + service + ".svg) no-repeat center");
             share_button.click(function(share_button_click_event) {
